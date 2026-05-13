@@ -1,0 +1,321 @@
+
+:root {
+  --primary-green: #006400;       /* Dark Green */
+  --primary-hover: #004d00;       /* Dark Green Hover */
+  --footer-bg: #070707;           /* Deep Black Base */
+  --footer-card-bg: #111111;      /* Tech Input Tint */
+  --text-gray-light: #e2e8f0;
+  --text-gray-muted: #94a3b8;
+  --font-sig: 'Dancing Script', cursive;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. MAIN FOOTER CONTAINER */
+.footer-v2 {
+  background-color: var(--footer-bg) !important;
+  color: var(--text-gray-light) !important;
+  padding: 80px 0 0 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. GRID ARCHITECTURE */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 0.9fr 1.1fr 1.2fr !important;
+  gap: 40px !important;
+  margin-bottom: 50px !important;
+  width: 100% !important;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* 3. BRAND & LOGO BLUEPRINT */
+.footer-logo-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 0.9;
+  margin-bottom: 18px;
+  width: max-content;
+}
+
+.footer-brand-logo {
+  height: 42px !important;
+  width: 42px !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--primary-green) !important;
+  object-fit: cover !important;
+  margin-bottom: 5px;
+}
+
+.brand-col .logo-text {
+  font-family: var(--font-sig) !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.brand-col .accent {
+  color: var(--primary-green);
+}
+
+.brand-pitch {
+  color: var(--text-gray-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Social Icons (Pills) */
+.social-pill-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-pill {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.social-pill:hover {
+  background: var(--primary-green);
+  color: #ffffff !important;
+  border-color: var(--primary-green);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+}
+
+/* 4. HEADINGS & TITLES */
+.footer-title {
+  font-family: var(--font-sig) !important;
+  font-size: 1.35rem;
+  color: var(--primary-green);
+  margin-bottom: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 5. NAVIGATION LINKS LIST */
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 12px;
+}
+
+.footer-nav-list a {
+  color: var(--text-gray-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+  width: max-content;
+}
+
+.footer-nav-list a:hover {
+  color: var(--primary-green);
+  padding-left: 5px;
+}
+
+/* 6. CONTACT DETAILS STACK */
+.contact-info-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-gray-muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.icon-box {
+  color: var(--primary-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 7. MODERN NEWSLETTER SUBSCRIBE FORM */
+.newsletter-text {
+  font-size: 0.88rem;
+  color: var(--text-gray-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.modern-subscribe {
+  display: flex;
+  background: var(--footer-card-bg);
+  padding: 4px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 320px;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.modern-subscribe:focus-within {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.1);
+}
+
+.modern-subscribe input {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  color: #ffffff;
+  flex: 1;
+  outline: none;
+  font-size: 0.88rem;
+  width: 100%;
+}
+
+.btn-send {
+  background: var(--primary-green);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.btn-send:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.status-msg {
+  font-size: 12px; 
+  margin-top: 10px; 
+  color: #006400; 
+  font-weight: 700;
+}
+
+/* 8. LEGAL BOTTOM BAR */
+.footer-legal-bar {
+  margin-top: 50px;
+  padding: 22px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.4);
+  width: 100% !important;
+}
+
+.bar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.82rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Developer Label (Umugwaneza Aline) */
+.developer-name {
+  color: var(--primary-green);
+  font-family: var(--font-sig) !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.legal-links a {
+  color: #64748b;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.legal-links a:hover {
+  color: var(--primary-green);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   9. BREAKPOINTS (TABLET & MOBILE FIXES — NO OVERFLOW)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-v2 {
+    padding: 60px 20px 0 20px !important; 
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 35px !important;
+    text-align: center !important;
+  }
+
+  .footer-logo-link, 
+  .social-pill-container, 
+  .contact-item, 
+  .modern-subscribe, 
+  .footer-nav-list a {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .contact-item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .bar-flex {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px;
+  }
+}

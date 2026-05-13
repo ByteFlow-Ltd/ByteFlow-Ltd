@@ -1,0 +1,174 @@
+/* Navbar.css */
+@import url('https://googleapis.com');
+
+:root {
+  --primary-color: #006400;
+  --glass-bg: rgba(255, 255, 255, 0.98);
+  --font-signature: 'Dancing Script', cursive;
+  --transition: all 0.3s ease;
+}
+
+/* Navbar Wrapper */
+.navbar-elite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0; /* Nagabanyije padding y'inyuma */
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Navbar Body - Slim & Professional */
+.nav-container {
+  pointer-events: auto;
+  width: 90%;
+  max-width: 1100px;
+  height: 60px; /* Nagabanyije height ngo ibe slim */
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 100, 0, 0.08);
+}
+
+/* Logo Section - No Gaps */
+.nav-logo-group {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1; /* Byegeranye neza */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-brand-logo {
+  height: 38px; /* Size ntoya kandi isobanutse */
+  width: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary-color);
+}
+
+.logo-text {
+  font-family: var(--font-signature);
+  font-size: 1.4rem; /* Nagabanyije size y'izina */
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-text .accent {
+  color: var(--primary-color);
+}
+
+.logo-slogan {
+  font-family: var(--font-signature);
+  font-size: 0.7rem; /* Slogan ntoya cyane pro */
+  color: var(--primary-color);
+  margin-left: 48px; /* Igereranye na logo */
+  margin-top: -6px; /* Nakuyeho gap yose hano */
+  opacity: 0.8;
+}
+
+/* Navigation Links - Reduced Size */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #333;
+  font-family: var(--font-signature);
+  font-size: 1.05rem; /* Nagabanyije size ya Navlinks */
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-item svg {
+  color: var(--primary-color);
+  width: 16px; /* Nagabanyije size y'izina rya icon */
+}
+
+.nav-item:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+/* Contact Button - Small & Slim */
+.nav-contact-btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-family: var(--font-signature);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-contact-btn:hover {
+  background: #000;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 75px;
+    right: -100%;
+    width: 220px;
+    background: #fff;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 15px 0;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .nav-menu.active {
+    right: 5%;
+  }
+  .nav-item {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    width: 94%;
+    height: 55px;
+  }
+  .logo-text { font-size: 1.2rem; }
+  .logo-slogan { display: none; }
+}

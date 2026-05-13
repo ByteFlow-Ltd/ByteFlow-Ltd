@@ -1,0 +1,398 @@
+
+:root {
+  --primary-green: #006400; /* Dark Green */
+  --light-green-bg: rgba(0, 100, 0, 0.04);
+  --dark-charcoal: #111111;
+  --body-muted: #555555;
+  --bg-pure-white: #ffffff;
+  --font-sig: 'Dancing Script', cursive;
+  --transition-smooth: all 0.3s ease;
+}
+
+/* --- PART 1: GLOBAL BLOG LAYOUT BASE --- */
+#byteflow-blog-hub {
+  background-color: var(--bg-pure-white);
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: var(--dark-charcoal);
+  padding-bottom: 80px;
+}
+
+.blog-limit {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.green-accent, .sig-font {
+  font-family: var(--font-sig) !important;
+  color: var(--primary-green) !important;
+  font-size: 1.25em;
+}
+
+/* Shared Read Link Style */
+.blog-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.blog-read-link:hover {
+  gap: 12px;
+}
+
+
+/* ==========================================================================
+   PART 2: BLOG MAIN HUB STYLES (MAIN PAGE)
+   ========================================================================== */
+
+/* Hero Section Main */
+.blog-hero-main {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 130px 0 70px 0; 
+  min-height: 55vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-inner-text {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.blog-tagline {
+  display: inline-block;
+  background: var(--primary-green);
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.blog-heading {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.blog-desc {
+  font-size: 1.05rem;
+  color: #dddddd;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Blog Grid */
+.blog-list-section {
+  padding: 60px 0;
+}
+
+.blog-grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Blog Item Card */
+.blog-item-card {
+  background: var(--bg-pure-white);
+  border-radius: 20px;
+  border: 1.5px solid #e2e8f0; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.blog-item-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-green);
+  box-shadow: 0 12px 25px rgba(0, 100, 0, 0.04);
+}
+
+.blog-card-visual {
+  height: 180px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.blog-card-icon {
+  color: #ffffff;
+  opacity: 0.85;
+  transition: var(--transition-smooth);
+}
+
+.blog-item-card:hover .blog-card-icon {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.blog-card-cat {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blog-card-info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-info h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--dark-charcoal);
+}
+
+.blog-card-info p {
+  font-size: 0.9rem;
+  color: var(--body-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.blog-card-footer {
+  margin-top: auto; 
+}
+
+
+/* ==========================================================================
+   PART 3: BLOG DETAIL STYLES (SINGLE ARTICLE VIEW)
+   ========================================================================== */
+
+.blog-detail-wrapper {
+  padding: 140px 0 80px 0; 
+}
+
+.blog-detail-wrapper .blog-limit {
+  max-width: 850px; /* Optimal reading width nka Nexventures */
+}
+
+.back-insights-btn {
+  margin-bottom: 35px;
+}
+
+/* Article Header Area */
+.detail-header-section {
+  margin-bottom: 35px;
+}
+
+.detail-category-badge {
+  display: inline-block;
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.detail-main-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--dark-charcoal);
+  margin-bottom: 20px;
+}
+
+.detail-meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--body-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+.detail-meta-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Big Hero Visual Icon Box */
+.detail-hero-visual {
+  width: 100%;
+  height: 250px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.large-icon-wrapper {
+  color: #ffffff;
+  transform: scale(1.5);
+}
+
+/* Article Text Rendering */
+.detail-article-body {
+  width: 100%;
+}
+
+.rich-text-section {
+  margin-bottom: 35px;
+}
+
+.detail-article-body .section-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--dark-charcoal);
+  margin-bottom: 12px;
+}
+
+.section-paragraph {
+  font-size: 1.05rem; /* Gabanyije size ngo bibe clean */
+  line-height: 1.65;
+  color: #222222; 
+  margin: 0;
+}
+
+/* Quote Block Dynamic */
+.detail-quote-block {
+  border-left: 4px solid var(--primary-green);
+  background: var(--light-green-bg);
+  padding: 25px;
+  border-radius: 0 16px 16px 0;
+  margin: 40px 0;
+}
+
+.detail-quote-block p {
+  font-family: var(--font-sig);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--primary-green);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Conclusion Box Layout */
+.detail-conclusion-box {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conclusion-cta-text {
+  margin-top: 25px;
+  font-weight: 700;
+  color: var(--primary-green) !important;
+  font-size: 1.05rem;
+}
+
+/* Social Share Circle */
+.detail-footer-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 50px;
+  padding-top: 25px;
+}
+
+.detail-footer-share p {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark-charcoal);
+  margin: 0;
+}
+
+.share-btn-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--light-green-bg);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0, 100, 0, 0.1);
+}
+
+.share-btn-circle:hover {
+  background: var(--primary-green);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Article Not Found */
+.blog-not-found {
+  padding: 160px 20px;
+  text-align: center;
+}
+
+.blog-not-found h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.center-link {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   PART 4: RESPONSIVE MEDIA QUERIES (TABLET & MOBILE FIXES)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Hub View */
+  .blog-hero-main { padding: 110px 0 50px 0; min-height: 45vh; }
+  .blog-list-section { padding: 40px 0; }
+  .blog-grid-system { grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); gap: 20px; }
+  .blog-card-info { padding: 20px; }
+
+  /* Detail View */
+  .blog-detail-wrapper { padding: 110px 0 60px 0; }
+  .detail-hero-visual { height: 180px; margin-bottom: 30px; }
+  .detail-main-title { font-size: 1.6rem; }
+  .detail-meta-info { gap: 12px; padding-bottom: 15px; }
+}
