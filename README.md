@@ -1,4 +1,6 @@
-<img width="1351" height="634" alt="image" src="https://github.com/user-attachments/assets/5555e77e-8e93-4ac8-ac37-5baa36e0a479" /># 🚀 Elite Digital Ecosystem Portfolio
+<img width="480" height="136" alt="IMG_20260430_160359" src="https://github.com/user-attachments/assets/28795b21-52b9-4229-a86b-6a4d34cad8d6" />
+
+# 🚀 Elite Digital Ecosystem Portfolio
 
 A premium, high-performance portfolio ecosystem engineered for digital mastery. This platform features custom-tailored branding architectures, responsive multi-category project grids, dynamic content filters, and immersive fluid interactions powered by React and Framer Motion—explicitly optimized for high-converting user experiences and modern corporate visual identities.
 
